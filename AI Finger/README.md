@@ -1,6 +1,6 @@
 # AISec - AIFinger 
 
-Internete census of Machine Learning and Artificial Intelligence Frameworks and Applications .   
+Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications.   
 
 ## Goals 
 The goal of this project is to provide tools and results of passive and active fingerprinting of Machine Learning and Artificial Intelligence Frameworks and Applications using a common Threat Intelligence approach and to answer the following questions:
