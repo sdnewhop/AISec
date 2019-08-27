@@ -22,6 +22,10 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [Convnet.js](#convnetjs)
   - [Synaptic.js](#synapticjs)
   - [Apache mxnet](#apache-mxnet)
+- [Databases with ML Content](#databases-with-ml-content)
+  - [Elasticsearch with ML data](#elasticsearch-with-ml-data)
+  - [MongoDB with ML data](#mongodb-with-ml-data)
+  - [Docker API with ML data](#docker-api-with-ml-data)
 - [Databases](#databases)
   - [Elasticsearch](#elasticsearch)
   - [Kibana (Elasticsearch Visualization Plugin)](#kibana-elasticsearch-visualization-plugin)
@@ -30,6 +34,7 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [Rsync](#rsync)
   - [Riak](#riak)
   - [Redis](#redis)
+  - [Redmon (Redis Web UI)](#redmon-redis-web-ui)
   - [Cassandra](#cassandra)
   - [Memcached](#memcached)
   - [MongoDB](#mongodb)
@@ -167,6 +172,33 @@ Confidence: Certain
 Confidence: Firm
 #### Shodan
 - apache http.html:"mxnet"
+## Databases with ML Content
+### Elasticsearch with ML data
+Confidence: Certain
+#### Shodan
+- all:"ml-logs" product:elastic port:9200 all:"Elastic Indices:"
+- all:"datasets" product:elastic port:9200 all:"Elastic Indices:"
+- all:"dataset" product:elastic port:9200 all:"Elastic Indices:"
+- all:"algomodel" product:elastic port:9200 all:"Elastic Indices:"
+- all:"models" product:elastic port:9200 all:"Elastic Indices:"
+- all:"predictions" product:elastic port:9200 all:"Elastic Indices:"
+#### Shodan Universal Query
+- ("ml-logs" OR "datasets" OR "dataset" OR "algomodel" OR "models" OR "predictions") "Elastic Indices:" product:elastic port:9200
+### MongoDB with ML data
+Confidence: Certain
+#### Shodan
+- all:"ml" product:MongoDB port:27017 -authentication
+- all:"dataset" product:MongoDB port:27017 -authentication
+- all:"datasets" product:MongoDB port:27017 -authentication
+- all:"models" product:MongoDB port:27017 -authentication
+#### Shodan Universal Query
+- ("ml" OR "dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction") "MongoDB Server Information" product:MongoDB port:27017 -authentication
+### Docker API with ML data
+Confidence: Firm
+#### Shodan
+- all:"ml" "Docker Containers:" port:2375
+#### Shodan Universal Query
+- ("dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction" OR "ml") "Docker Containers:" port:2375
 ## Databases
 ### Elasticsearch
 Confidence: Certain
@@ -179,6 +211,8 @@ Confidence: Certain
 Confidence: Certain
 #### Shodan
 - kibana content-length: 217
+- "kbn-name"
+- http.favicon.hash:-759754862
 ### Gitlab
 Confidence: Certain
 #### Shodan
@@ -203,6 +237,10 @@ Confidence: Certain
 - "redis_build_id:"
 - product:Redis
 - product:Redis tag:database
+### Redmon (Redis Web UI)
+Confidence: Certain
+#### Shodan
+- http.title:"Redmon" http.component:"d3"
 ### Cassandra
 Confidence: Certain
 #### Shodan
