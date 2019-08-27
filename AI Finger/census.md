@@ -183,7 +183,7 @@ Confidence: Certain
 - all:"models" product:elastic port:9200 all:"Elastic Indices:"
 - all:"predictions" product:elastic port:9200 all:"Elastic Indices:"
 #### Shodan Universal Query
-- ("ml-logs" OR "datasets" OR "dataset" OR "algomodel" OR "models" OR "predictions") "Elastic Indices:" product:elastic port:9200
+- ("ml-logs" OR "datasets" OR "dataset" OR "algomodel" OR "models" OR "predictions" OR "tensorflow" OR "tensor") "Elastic Indices:" product:elastic port:9200
 ### MongoDB with ML data
 Confidence: Certain
 #### Shodan
@@ -192,13 +192,13 @@ Confidence: Certain
 - all:"datasets" product:MongoDB port:27017 -authentication
 - all:"models" product:MongoDB port:27017 -authentication
 #### Shodan Universal Query
-- ("ml" OR "dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction") "MongoDB Server Information" product:MongoDB port:27017 -authentication
+- ("ml" OR "dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction" OR "tensorflow" OR "tensor") "MongoDB Server Information" product:MongoDB port:27017 -authentication
 ### Docker API with ML data
 Confidence: Firm
 #### Shodan
 - all:"ml" "Docker Containers:" port:2375
 #### Shodan Universal Query
-- ("dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction" OR "ml") "Docker Containers:" port:2375
+- ("dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction" OR "ml" OR "tensorflow" OR "tensor") "Docker Containers:" port:2375
 ## Databases
 ### Elasticsearch
 Confidence: Certain
