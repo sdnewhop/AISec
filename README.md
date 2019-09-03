@@ -1,6 +1,6 @@
 # AISec
 
-Cybersecurity of Machine Learning and Artificial Intelligence 
+Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 
 ## Projects
 * [AIFinger - Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications](AI%20Finger/)
@@ -13,3 +13,4 @@ Cybersecurity of Machine Learning and Artificial Intelligence
 * [Sergey Gordeychik](https://twitter.com/scadasl)
 * [Anton Nikolaev](https://github.com/manmolecular)
 * [Denis Kolegov](https://twitter.com/dnkolegov)
+* Maria Nedyak
