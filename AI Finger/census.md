@@ -3,7 +3,9 @@
 Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications.
 ## Products
 - [Management Controllers](#management-controllers)
-  - [NVIDIA DGX-1 Baseboard Management Controller](#nvidia-dgx-1-baseboard-management-controller)
+  - [NVIDIA DGX-1 Baseboard Management Controller (Megarac SP)](#nvidia-dgx-1-baseboard-management-controller-megarac-sp)
+  - [QCT Baseboard Management Controller (Megarac SP)](#qct-baseboard-management-controller-megarac-sp)
+  - [Megarac SP (Basic)](#megarac-sp-basic)
 - [Frameworks](#frameworks)
   - [TensorFlow](#tensorflow)
   - [NVIDIA DIGITS](#nvidia-digits)
@@ -70,13 +72,21 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [Face-api.js](#face-apijs)
 
 ## Management Controllers
-### NVIDIA DGX-1 Baseboard Management Controller
+### NVIDIA DGX-1 Baseboard Management Controller (Megarac SP)
 Confidence: Certain
 #### Shodan
 - "Content-Length: 1820" lighttpd port:443
+
+### QCT Baseboard Management Controller (Megarac SP)
+Confidence: Certain
+#### Shodan
 - "Content-Length: 1901" lighttpd port:443
 - ssl:"quantatw.com" lighttpd
 - ssl.cert.issuer.CN:"Quanta" port:"443" all:"lighttpd"
+
+### Megarac SP (Basic)
+Confidence: Certain
+#### Shodan
 - "3.14.17-ami"
 #### Censys
 - 443.https.get.title:"Megarac SP" AND 443.https.get.headers.server:"lighttpd"
