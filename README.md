@@ -8,6 +8,8 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 ## Talks
 * [AI for Security or Security for AI? XCON 2019](http://xcon.xfocus.org/#08)
 
+## Slides
+* [Trust, but Verify: Dangers of MaaS. Data Fest Siberia² 2019](slides/datafest-siberia-2019.pdf)  
 
 ## Contributors
 * [Sergey Gordeychik](https://twitter.com/scadasl)
