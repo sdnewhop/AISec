@@ -16,4 +16,4 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 * [Sergey Gordeychik](https://twitter.com/scadasl)
 * [Anton Nikolaev](https://github.com/manmolecular)
 * [Denis Kolegov](https://twitter.com/dnkolegov)
-* Maria Nedyak
+* [Maria Nedyak](https://twitter.com/mariya_ns)
