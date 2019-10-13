@@ -17,3 +17,4 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 * [Anton Nikolaev](https://github.com/manmolecular)
 * [Denis Kolegov](https://twitter.com/dnkolegov)
 * [Maria Nedyak](https://twitter.com/mariya_ns)
+* Roman Palkin
