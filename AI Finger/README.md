@@ -11,7 +11,7 @@ The goal of this project is to provide tools and results of passive and active f
 * How long does it take to patch vulnerabilities, apply security updates to the ML/AI backed systems  deployed on the Internet?
 
 ## Map
-[![Map Screenshot](/AI%20Finger/Oct%202019/map_oct_2019.png?raw=true "Map Screenshot")](https://sdnewhop.github.io/AISec/AI%20Finger/Oct%202019/map/index.html)
+[![Map Screenshot](https://raw.githubusercontent.com/sdnewhop/AISec/master/AI%20Finger/Oct%202019/map_oct_2019.png)](https://sdnewhop.github.io/AISec/AI%20Finger/Oct%202019/map/index.html)
 
 ## Tools
 * [Grinder Framework](https://github.com/sdnewhop/grinder)
