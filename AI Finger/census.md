@@ -2,10 +2,23 @@
 ## Overview
 Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications.
 ## Products
+- [Medical Imaging](#medical-imaging)
+  - [NVIDIA AI Annotation Assistance server](#nvidia-ai-annotation-assistance-server)
+- [Mining Stations](#mining-stations)
+  - [XMRPool](#xmrpool)
 - [Management Controllers](#management-controllers)
-  - [NVIDIA DGX-1 Baseboard Management Controller (Megarac SP)](#nvidia-dgx-1-baseboard-management-controller-megarac-sp)
-  - [QCT Baseboard Management Controller (Megarac SP)](#qct-baseboard-management-controller-megarac-sp)
-  - [Megarac SP (Basic)](#megarac-sp-basic)
+  - [NVIDIA DGX-1 Baseboard Management Controller](#nvidia-dgx-1-baseboard-management-controller)
+  - [NVIDIA DGX-2 Baseboard Management Controller](#nvidia-dgx-2-baseboard-management-controller)
+  - [QCT Baseboard Management Controller](#qct-baseboard-management-controller)
+- [Infrastructure](#infrastructure)
+  - [ONNX (Open Neural Network Exchange)](#onnx-open-neural-network-exchange)
+  - [Oracle GraphPipe](#oracle-graphpipe)
+  - [Amazon Greengrass](#amazon-greengrass)
+  - [Apache Spark](#apache-spark)
+  - [Apache Flink](#apache-flink)
+  - [Apache Airflow](#apache-airflow)
+  - [MLflow](#mlflow)
+  - [Kubeflow](#kubeflow)
 - [Frameworks](#frameworks)
   - [TensorFlow](#tensorflow)
   - [NVIDIA DIGITS](#nvidia-digits)
@@ -26,10 +39,11 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [Convnet.js](#convnetjs)
   - [Synaptic.js](#synapticjs)
   - [Apache mxnet](#apache-mxnet)
-- [Databases with ML Content](#databases-with-ml-content)
+- [Services with ML Content](#services-with-ml-content)
   - [Elasticsearch with ML data](#elasticsearch-with-ml-data)
   - [MongoDB with ML data](#mongodb-with-ml-data)
   - [Docker API with ML data](#docker-api-with-ml-data)
+  - [TensorFlow Instances in Docker](#tensorflow-instances-in-docker)
 - [Databases](#databases)
   - [Elasticsearch](#elasticsearch)
   - [Kibana (Elasticsearch Visualization Plugin)](#kibana-elasticsearch-visualization-plugin)
@@ -71,26 +85,115 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [FaceDetector.js](#facedetectorjs)
   - [Face-api.js](#face-apijs)
 
+## Medical Imaging
+### NVIDIA AI Annotation Assistance server
+Confidence: Certain
+#### Shodan
+- http.title:"NVIDIA AIAA Server documentation"
+- http.favicon.hash:816615992 http.component:"google font api"
+
+## Mining Stations
+### XMRPool
+Confidence: Certain
+#### Shodan
+- all:"hashes_total" port:5555
+- all:"hashes_total" "application/json"
+- nvidia all:"hashes_total"
+
 ## Management Controllers
-### NVIDIA DGX-1 Baseboard Management Controller (Megarac SP)
+### NVIDIA DGX-1 Baseboard Management Controller
 Confidence: Certain
 #### Shodan
 - "Content-Length: 1820" lighttpd port:443
 
-### QCT Baseboard Management Controller (Megarac SP)
+### NVIDIA DGX-2 Baseboard Management Controller
+Confidence: Certain
+#### Shodan
+- ssl:"American Megatrends Inc" http.html:"index.html" "Server: lighttpd" port:"443" "200 OK" "unsafe-inline" "Content-Length: 1249"
+- ssl:"American Megatrends Inc" "Content-Length: 1249"
+#### Censys
+- 443.https.get.title: "NVIDIA DGX-2"
+- "DGX-2" AND "COPYRIGHT American Megatrends Inc. 2016-2017"
+
+### QCT Baseboard Management Controller
 Confidence: Certain
 #### Shodan
 - "Content-Length: 1901" lighttpd port:443
 - ssl:"quantatw.com" lighttpd
 - ssl.cert.issuer.CN:"Quanta" port:"443" all:"lighttpd"
+#### Censys
+- 443.https.get.body_sha256: fd2d03b750513363f8761dfafcbf9a0a20811204cb965a3373c5c1ca13457988
 
-### Megarac SP (Basic)
+## Infrastructure
+### ONNX (Open Neural Network Exchange)
 Confidence: Certain
 #### Shodan
-- "3.14.17-ami"
+- all:"ONNX" "Server: Werkzeug"
+- http.html:"onnx.min.js"
+- http.html:"onnx.js"
+- http.html:"myOnnxSession"
 #### Censys
-- 443.https.get.title:"Megarac SP" AND 443.https.get.headers.server:"lighttpd"
-- ((("<title>Megarac SP</title>") AND protocols: "443/https") AND protocols: "623/ipmi") AND 443.https.get.headers.server:"lighttpd"
+- "onnx.min.js"
+- "myOnnxSession"
+
+### Oracle GraphPipe
+Confidence: Firm
+#### Shodan
+- all:"GraphPipe"
+- http.html:"graphpipe-tf"
+- http.html:"graphpipe-batcher"
+
+### Amazon Greengrass
+Confidence: Tentative
+#### Shodan
+- all:"greengrass" org:"Amazon.com"
+
+### Apache Spark
+Confidence: Certain
+#### Shodan
+- http.html:"/static/spark-logo-77x50px"
+- http.favicon.hash:856048515
+- http.title:"PySpark"
+- http.html:"pyspark-shell"
+#### Censys
+- "spark jobs"
+- "spark master at"
+
+### Apache Flink
+Confidence: Certain
+#### Shodan
+- http.title:"Apache Flink"
+- http.favicon.hash:180732787
+#### Censys
+- 443.https.get.title: "Apache Flink"
+- "ng-app=\"flinkApp\""
+
+### Apache Airflow
+Confidence: Certain
+#### Shodan
+- all:"airflow" "Server: gunicorn" http.title:"DAGs"
+- http.title:"Airflow - DAGs"
+#### Censys
+- 80.http.get.title: "Airflow - DAGs"
+
+### MLflow
+Confidence: Certain
+#### Shodan
+- http.title:"MLflow"
+- http.favicon.hash:-1507094812
+#### Censys
+- 80.http.get.title: "MLflow"
+
+### Kubeflow
+Confidence: Certain
+#### Shodan
+- all:"Kubeflow" -"404"
+- http.title:"Kubeflow Central Dashboard"
+- http.title:"Kubeflow UI"
+- http.favicon.hash:-1203021870
+#### Censys
+- 80.http.get.title: "Kubeflow Central Dashboard"
+- 80.http.get.title: "Kubeflow UI"
 
 ## Frameworks
 ### TensorFlow
@@ -269,7 +372,7 @@ Confidence: Tentative
 #### Censys
 - apache AND (443.https.get.body: "mxnet" OR 80.http.get.body: "mxnet")
 
-## Databases with ML Content
+## Services with ML Content
 ### Elasticsearch with ML data
 Confidence: Certain
 #### Shodan
@@ -298,6 +401,11 @@ Confidence: Firm
 - all:"ml" "Docker Containers:" port:2375
 #### Shodan Universal Query
 - ("dataset" OR "datasets" OR "ml-logs" OR "algomodel" OR "models" OR "predictions" OR "prediction" OR "ml" OR "tensorflow" OR "tensor") "Docker Containers:" port:2375
+
+### TensorFlow Instances in Docker
+Confidence: Tentative
+#### Shodan
+- tensorflow "application/json" "docker"
 
 ## Databases
 ### Elasticsearch
