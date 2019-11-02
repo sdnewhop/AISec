@@ -2,6 +2,9 @@
 ## Overview
 Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications.
 ## Products
+- [Federated Learning](#federated-learning)
+  - [Deeplearning4j](#deeplearning4j)
+  - [FATE](#fate)
 - [Medical Imaging](#medical-imaging)
   - [NVIDIA AI Annotation Assistance server](#nvidia-ai-annotation-assistance-server)
 - [Mining Stations](#mining-stations)
@@ -84,6 +87,22 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [JQuery Facedetection](#jquery-facedetection)
   - [FaceDetector.js](#facedetectorjs)
   - [Face-api.js](#face-apijs)
+
+## Federated Learning
+### deeplearning4j
+Confidence: Certain
+#### Shodan
+- http.title:"DL4J Training UI"
+- http.favicon.hash:-165549574
+
+### FATE
+Confidence: Certain
+#### Shodan
+- http.title:"FATE Board"
+- all:"FATE" "Content-Length: 2831"
+#### Censys
+- 8080.http.get.title: "FATE Board"
+- "FATE" AND 8080.http.get.headers.content_length: 2831
 
 ## Medical Imaging
 ### NVIDIA AI Annotation Assistance server
