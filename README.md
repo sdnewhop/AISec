@@ -10,6 +10,7 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 * [AI for Security or Security for AI? XCON 2019](http://xcon.xfocus.org/#08)
 
 ## Slides
+* [Malign Machine Learning Models](slides/zn-2019-malignml.pdf)
 * [Machine learning implementation security in the wild](slides/aisec-poc-2019.pdf)
 * [Trust, but Verify: Dangers of MaaS. Data Fest Siberia² 2019](slides/datafest-siberia-2019.pdf)  
 
