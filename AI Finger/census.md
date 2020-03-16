@@ -2,6 +2,10 @@
 ## Overview
 Internet census of Machine Learning and Artificial Intelligence Frameworks and Applications.
 ## Products
+- [AMQP and MQTT Message Brokers](#amqp-and-mqtt-message-brokers)
+  - [RabbitMQ Message Brokers](#rabbitmq-message-brokers)
+  - [MQTT Message Brokers](#mqtt-message-brokers)
+  - [Eclipse Mosquitto Message Brokers](#eclipse-mosquitto-message-brokers)
 - [Federated Learning](#federated-learning)
   - [Deeplearning4j](#deeplearning4j)
   - [FATE](#fate)
@@ -68,7 +72,6 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [Apache Kafka Consumer Offset Monitor](#apache-kafka-consumer-offset-monitor)
   - [Apache Kafka Manager](#apache-kafka-manager)
   - [Apache Kafka Message Broker](#apache-kafka-message-broker)
-  - [RabbitMQ Message Broker](#rabbitmq-message-broker)
   - [Celery Distributed Task Queue](#celery-distributed-task-queue)
   - [Gearman Job Queue Monitor](#gearman-job-queue-monitor)
 - [Interactive Voice Response (IVR)](#interactive-voice-response-ivr)
@@ -87,6 +90,34 @@ Internet census of Machine Learning and Artificial Intelligence Frameworks and A
   - [JQuery Facedetection](#jquery-facedetection)
   - [FaceDetector.js](#facedetectorjs)
   - [Face-api.js](#face-apijs)
+
+## AMQP and MQTT Message Brokers
+### RabbitMQ Message Brokers
+Confidence: Certain
+#### Shodan
+- "Product: RabbitMQ"
+- product:"RabbitMQ"
+- "AMQP" "rabbitmq"
+#### Censys
+- ("rabbitmq") AND protocols: "5672/amqp"
+
+### MQTT Message Brokers
+Confidence: Certain
+#### Shodan
+- port:1883 "mqtt connection"
+- port:1883 "mqtt connection code: 0" "topics:"
+#### Censys
+- 1883.mqtt.banner.connack.connect_return:*
+- 1883.mqtt.banner.connack.connect_return:"Connection Accepted"
+- 1883.mqtt.banner.connack.raw:0
+
+### Eclipse Mosquitto Message Brokers
+Confidence: Certain
+#### Shodan
+- product:"Mosquitto" port:1883
+#### Censys
+- ("mosquitto") AND protocols: "1883/mqtt"
+- 8883.mqtt.banner.tls.certificate.parsed.names:"mosquitto"
 
 ## Federated Learning
 ### deeplearning4j
@@ -573,15 +604,6 @@ Confidence: Certain
 - "WWW-Authenticate: Basic realm=\"Welcome to Kafka Monitor on wqa environment\""
 #### Censys
 - "Basic realm=\"Kafka-Manager\""
-
-### RabbitMQ Message Broker
-Confidence: Certain
-#### Shodan
-- "Product: RabbitMQ"
-- product:"RabbitMQ"
-- "AMQP" "rabbitmq"
-#### Censys
-- ("rabbitmq") AND protocols: "5672/amqp"
 
 ### Celery Distributed Task Queue
 Confidence: Firm
