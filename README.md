@@ -17,6 +17,9 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 * [Machine learning implementation security in the wild](slides/aisec-poc-2019.pdf)
 * [Trust, but Verify: Dangers of MaaS. Data Fest Siberia² 2019](slides/datafest-siberia-2019.pdf)  
 
+## Papers
+[D Kolegov, A Nikolaev , S Gordeychik. Measuring Artificial Intelligence and Machine Learning Implementation Security on the Internet](slides/AIMLInternetCensus2.pdf)
+
 ## Contributors
 * [Sergey Gordeychik](https://twitter.com/scadasl)
 * [Anton Nikolaev](https://github.com/manmolecular)
