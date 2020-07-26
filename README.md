@@ -13,7 +13,7 @@ Cybersecurity of Machine Learning and Artificial Intelligence Implementations
 ## Slides
 * [Hacking Medical Imaging with DICOM](slides/zn-2019-hm.pdf)
 * [Malign Machine Learning Models](slides/zn-2019-malignml.pdf)
-* [I for Security or Security for AI?](slides/AI Security - Sergei - HITB -small.pdf)
+* [I for Security or Security for AI?](slides/AI%20Security%20-%20Sergei%20-%20HITB%20-small.pdf)
 * [Machine learning implementation security in the wild](slides/aisec-poc-2019.pdf)
 * [Trust, but Verify: Dangers of MaaS. Data Fest Siberia² 2019](slides/datafest-siberia-2019.pdf)  
 
